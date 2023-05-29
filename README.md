@@ -190,7 +190,7 @@ https://engineeringxpert.com/wp-content/uploads/2022/04/26.png
 bool col1,col2,col3,col4;
 
 
-void SystemClock_Config(void);
+void SystemClock_Config(void); 
 static void MX_GPIO_Init(void);
 void key();
 
