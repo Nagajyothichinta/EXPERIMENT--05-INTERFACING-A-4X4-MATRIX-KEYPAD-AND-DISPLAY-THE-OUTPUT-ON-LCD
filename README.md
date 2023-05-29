@@ -182,7 +182,7 @@ https://engineeringxpert.com/wp-content/uploads/2022/04/26.png
 
 ## STM 32 CUBE PROGRAM :
 
-
+```
 #include "main.h"
 #include<stdbool.h>
 #include"lcd.h"
@@ -245,26 +245,26 @@ void key()
 			col3=1;;
 		}
 	else if(!col4)
-			{
-				Lcd_cursor(&lcd,0,1);
-				Lcd_string(&lcd, "key ./.\n");
-				col4=1;
-			}
-				HAL_Delay(1000);
-				HAL_GPIO_WritePin(GPIOC,GPIO_PIN_0,GPIO_PIN_SET);
-					HAL_GPIO_WritePin(GPIOC,GPIO_PIN_1,GPIO_PIN_RESET);
-					HAL_GPIO_WritePin(GPIOC,GPIO_PIN_2,GPIO_PIN_SET);
-					HAL_GPIO_WritePin(GPIOC,GPIO_PIN_3,GPIO_PIN_SET);
-					col1=HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_4);
-					col2=HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_5);
-					col3=HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_6);
-					col4=HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_7);
+		{
+			Lcd_cursor(&lcd,0,1);
+			Lcd_string(&lcd, "key ./.\n");
+			col4=1;
+		}
+		HAL_Delay(1000);
+		HAL_GPIO_WritePin(GPIOC,GPIO_PIN_0,GPIO_PIN_SET);
+		HAL_GPIO_WritePin(GPIOC,GPIO_PIN_1,GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(GPIOC,GPIO_PIN_2,GPIO_PIN_SET);
+		HAL_GPIO_WritePin(GPIOC,GPIO_PIN_3,GPIO_PIN_SET);
+		col1=HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_4);
+		col2=HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_5);
+		col3=HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_6);
+		col4=HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_7);
 
-					if(!col1)
-					{
-						Lcd_cursor(&lcd,0,1);
-						Lcd_string(&lcd, "key 4\n");
-						col1=1;
+		if(!col1)
+		{
+			Lcd_cursor(&lcd,0,1);
+			Lcd_string(&lcd, "key 4\n");
+			col1=1;
 					}
 					else if(!col2)
 						{
@@ -450,7 +450,7 @@ void assert_failed(uint8_t *file, uint32_t line)
 {
  
 #endif 
-
+```
 
 
 
